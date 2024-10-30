@@ -1,0 +1,169 @@
+.collector-checkout-selected .place-order,
+.collector-checkout-selected #place_order, 
+.collector-checkout-selected ul.payment_methods, 
+.collector-checkout-selected p.wc-terms-and-conditions {
+    display:none;
+}
+/* Tabs */
+ul.collector-checkout-tabs {
+	padding: 0px;
+	list-style: none;
+	margin: 0 0 1px 0;
+	font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+ul.collector-checkout-tabs li {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+}
+/* Radio button layout */
+ul.collector-checkout-tabs li {
+	margin-right: 8px;
+	padding-left: 30px;
+	font-weight: bold;
+	box-sizing: content-box;
+}
+ul.collector-checkout-tabs li:before {
+	border-radius: 50%;
+	width: 20px;
+    height: 20px;
+    content: ' ';
+    position: absolute;
+    left: 0;
+    background: #ffffff;
+    border: 2px solid #BBBBBB;
+    box-sizing: content-box;
+}
+ul.collector-checkout-tabs li:hover:before {
+	 border: 2px solid grey;
+}
+ul.collector-checkout-tabs li.current:before {
+    border-color: #75BAFF;
+}
+ul.collector-checkout-tabs li.current:after {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    content: ' ';
+    border: 6px solid #000000;
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+
+#collector_change_payment_method {
+	margin-bottom: 15px;
+}
+.collector-checkout-thankyou {
+	min-height: 431px;
+}
+.woocommerce-order-received.collector-b2c-b2b .woocommerce-order-details,
+.woocommerce-order-received.collector-b2c .woocommerce-order-details,
+.woocommerce-order-received.collector-b2b .woocommerce-order-details,
+.woocommerce-order-received.collector-b2c-b2b .woocommerce-customer-details,
+.woocommerce-order-received.collector-b2c .woocommerce-customer-details,
+.woocommerce-order-received.collector-b2b .woocommerce-customer-details,
+.woocommerce-order-received.collector-b2c-b2b h1.entry-title,
+.woocommerce-order-received.collector-b2c h1.entry-title,
+.woocommerce-order-received.collector-b2b h1.entry-title {
+	width: 87.5%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.collector-modal {
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 1s;
+    padding: 20px;
+}
+.collector-modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 600px; /* Could be more or less, depending on screen size */
+    text-align: center;
+}
+
+/* Hide shipping methods in order review if displayed in Collector iframe */
+
+.collector-delivery-module ul#shipping_method {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+/* Checkout design */
+.collector-checkout-selected textarea[name="order_comments"] { 
+    resize: vertical; 
+}
+
+/* Storefront light */
+.cco-two-column-left-sf .woocommerce-info {
+    background-color: #eeeeee;
+    color: #6d6d6d;
+}
+.cco-two-column-left-sf .woocommerce-info:before {
+    color: #6d6d6d;
+}
+.cco-two-column-left-sf .woocommerce-info a,
+.cco-two-column-left-sf .woocommerce-info a:hover {
+    color: #6d6d6d;
+}
+
+.cco-two-column-left-sf .woocommerce-checkout-review-order-table th,
+.cco-two-column-left-sf .woocommerce-checkout-review-order-table td {
+    padding: 1em 0.41575em;
+}
+
+.cco-two-column-left-sf .woocommerce-checkout-review-order-table thead {
+    display: none;
+}
+.cco-two-column-left-sf .woocommerce-checkout-review-order-table:not( .has-background ) th, 
+.cco-two-column-left-sf .woocommerce-checkout-review-order-table:not( .has-background ) tbody td {
+    background-color: #fdfdfd;
+}
+.cco-two-column-left-sf .cart-subtotal th,
+.cco-two-column-left-sf .cart-subtotal td {
+    border-top: .0625rem solid #e6e6e6;
+}
+.cco-two-column-left-sf textarea {
+    background-color: transparent;
+    border: .0625rem solid #e6e6e6;
+}
+.cco-two-column-left-sf .woocommerce-checkout-review-order-table {
+    padding-top: 1.5rem;
+}
+
+/* Desktop view / multi columns */
+@media only screen and (min-width : 769px) {
+
+    .cco-two-column-right #collector-wrapper {
+        display: grid;
+        grid-template-columns: 4fr 6fr;	
+        grid-column-gap: 70px;
+    }
+
+    .cco-two-column-left #collector-wrapper,
+    .cco-two-column-left-sf #collector-wrapper {
+        display: grid;
+        grid-template-columns: 6fr 4fr;	
+        grid-column-gap: 70px;
+    }
+
+    .cco-two-column-left #collector-order-review,
+    .cco-two-column-left-sf #collector-order-review {
+        order: 2;
+    }
+
+    .cco-two-column-left #collector-iframe,
+    .cco-two-column-left-sf #collector-iframe {
+        order: 1;
+    }
+}

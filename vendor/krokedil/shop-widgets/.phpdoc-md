@@ -1,0 +1,14 @@
+<?php
+return (object) [
+	'rootNamespace' => 'Krokedil\ShopWidgets',
+	'destDirectory' => 'docs\classes',
+	'format'        => 'github',
+	'classes'       => [
+		'\Krokedil\ShopWidgets\CartWidget',
+		'\Krokedil\ShopWidgets\ProductWidget',
+		'\Krokedil\ShopWidgets\Abstracts\AbstractWidget',
+		'\Krokedil\ShopWidgets\Traits\FixedHook',
+		'\Krokedil\ShopWidgets\Traits\HasStyles',
+		'\Krokedil\ShopWidgets\Traits\HasScripts'
+	]
+];
